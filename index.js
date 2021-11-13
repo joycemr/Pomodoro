@@ -29,11 +29,23 @@ app.on('ready', () => {
     tray = new Tray(iconPath);
 
     // show icon on icon click
-    tray.on('click', () => {
+    tray.on('click', (event, bounds) => {
+        // get bounds of click event
+        const { x, y } = bounds;
+
+        // get bounds of the window
+        const { height, width } = mainWindow.getBounds();
+
         if (mainWindow.isVisible()) {
             mainWindow.hide();
         }
         else {
+            mainWindow.setBounds({
+                x: x - width / 2,
+                y: y,
+                height: height,
+                width: width
+            });
             mainWindow.show();
         }
     });
