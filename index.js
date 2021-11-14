@@ -36,13 +36,16 @@ app.on('ready', () => {
         // get bounds of the window
         const { height, width } = mainWindow.getBounds();
 
+        // reset y if on windows
+        const yPosition = process.platform === 'darwin' ? y : y - height;
+
         if (mainWindow.isVisible()) {
             mainWindow.hide();
         }
         else {
             mainWindow.setBounds({
                 x: x - width / 2,
-                y: y,
+                y: yPosition,
                 height: height,
                 width: width
             });
