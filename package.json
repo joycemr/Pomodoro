@@ -1,22 +1,33 @@
 {
-  "name": "timer",
+  "name": "tasky",
   "version": "1.0.0",
-  "description": "Electron timer app",
-  "main": "main.js",
+  "description": "Electron Tray Application",
+  "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "electron": "electron ."
   },
-  "author": "Rallycoding",
-  "devDependencies": {
-    "electron": "^15.3.1"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joycemr/tasky.git"
   },
+  "keywords": [
+    "electron",
+    "react"
+  ],
+  "author": "Michael Joyce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joycemr/tasky/issues"
+  },
+  "homepage": "https://github.com/joycemr/tasky#readme",
   "dependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.0",
     "babel-preset-react": "^6.23.0",
     "babel-preset-stage-1": "^6.22.0",
+    "electron": "^28.1.0",
     "electron-localshortcut": "^1.1.1",
     "moment": "^2.18.1",
     "moment-duration-format": "^1.3.0",
