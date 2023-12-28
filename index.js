@@ -5,6 +5,7 @@ const TimerTray = require('./app/timer_tray');
 const { app, BrowserWindow } = electron;
 
 let mainWindow;
+let tray;
 
 app.on('ready', () => {
 
@@ -23,6 +24,7 @@ app.on('ready', () => {
 
     const iconName = process.platform === 'win32' ? 'windows-icon.png' : 'iconTemplate.png';
     const icon = path.join(__dirname, `./src/assets/${iconName}`);
-    new TimerTray(icon, mainWindow);
+    // Assign this variable to prevent the timerTray from being deleted by the garbage collector
+    tray = new TimerTray(icon, mainWindow);
 
 });
