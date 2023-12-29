@@ -14,6 +14,5 @@ app.on('ready', () => {
     const icon = path.join(__dirname, `./src/assets/${iconName}`);
     mainWindow = new MainWindow();
     mainWindow.loadURL(`file://${__dirname}/src/index.html`);
-    mainWindow.on('blur', () => mainWindow.hide());
     tray = new TimerTray(icon, mainWindow);
 });
