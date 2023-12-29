@@ -1,5 +1,5 @@
 {
-  "name": "tasky",
+  "name": "pomodoro",
   "version": "1.0.0",
   "description": "Electron Tray Application",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joycemr/tasky.git"
+    "url": "git+https://github.com/joycemr/Pomodoro"
   },
   "keywords": [
     "electron",
@@ -18,9 +18,9 @@
   "author": "Michael Joyce",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/joycemr/tasky/issues"
+    "url": "https://github.com/joycemr/Pomodoro/issues"
   },
-  "homepage": "https://github.com/joycemr/tasky#readme",
+  "homepage": "https://github.com/joycemr/Pomodoro#readme",
   "dependencies": {
     "babel-core": "^6.24.0",
     "babel-loader": "^6.4.1",
