@@ -2,7 +2,7 @@ const electron = require('electron');
 const { BrowserWindow } = electron;
 
 class MainWindow extends BrowserWindow {
-    constructor() {
+    constructor(url) {
         super({
             webPreferences: {
                 nodeIntegration: true,
@@ -14,6 +14,7 @@ class MainWindow extends BrowserWindow {
             resizable: false,
             show: false
         });
+        this.loadURL(url);
         this.on('blur', this.onBlur.bind(this));
     }
     onBlur() {
